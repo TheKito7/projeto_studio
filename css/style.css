@@ -449,3 +449,331 @@ nav a:hover{
     background:#a78650;
 
 }
+/* ======================================================
+   STYLE.CSS - PARTE 2
+   Objetivos | Conceito | Plantas | Fluxograma
+======================================================*/
+
+/* =======================
+   OBJETIVOS
+======================= */
+
+.objetivos{
+    background:#f8f8f8;
+}
+
+.objetivos .cards{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.objetivos .card{
+
+    background:#fff;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    transition:.4s;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+}
+
+.objetivos .card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.objetivos .card i{
+
+    font-size:55px;
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+}
+
+.objetivos .card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+}
+
+.objetivos .card p{
+
+    color:#777;
+
+    font-size:16px;
+
+}
+
+/* =======================
+   CONCEITO
+======================= */
+
+.conceito{
+
+    background:white;
+
+}
+
+.conceito .container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.conceito .imagem{
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.conceito .imagem img{
+
+    transition:.5s;
+
+}
+
+.conceito .imagem:hover img{
+
+    transform:scale(1.06);
+
+}
+
+.conceito .texto h2{
+
+    margin:15px 0 25px;
+
+}
+
+.conceito .texto p{
+
+    margin-bottom:30px;
+
+    font-size:17px;
+
+}
+
+.conceito ul{
+
+    list-style:none;
+
+}
+
+.conceito ul li{
+
+    margin:18px 0;
+
+    font-size:17px;
+
+    color:#555;
+
+    padding-left:15px;
+
+    border-left:4px solid var(--gold);
+
+}
+
+/* =======================
+   PLANTAS
+======================= */
+
+.plantas{
+
+    background:#f4f4f4;
+
+}
+
+.plantas-grid{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.planta{
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.planta:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.planta img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.planta:hover img{
+
+    transform:scale(1.03);
+
+}
+
+.planta h3{
+
+    text-align:center;
+
+    padding:25px;
+
+    background:white;
+
+    color:var(--primary);
+
+    font-size:24px;
+
+}
+
+/* =======================
+   FLUXOGRAMA
+======================= */
+
+.fluxo{
+
+    background:white;
+
+}
+
+.timeline{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.timeline div{
+
+    flex:1;
+
+    min-width:140px;
+
+    background:#fff;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    color:#333;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    position:relative;
+
+    transition:.4s;
+
+}
+
+.timeline div:hover{
+
+    background:var(--gold);
+
+    color:white;
+
+    transform:translateY(-8px);
+
+}
+
+.timeline div:not(:last-child)::after{
+
+    content:"➜";
+
+    position:absolute;
+
+    right:-22px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:22px;
+
+    color:var(--gold);
+
+}
+
+/* =======================
+   EFEITOS
+======================= */
+
+.card,
+.planta,
+.timeline div{
+
+    opacity:1;
+
+    transition:all .4s ease;
+
+}
