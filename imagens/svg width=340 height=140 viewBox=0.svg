@@ -1,0 +1,70 @@
+<svg width="340" height="140" viewBox="0 0 340 140" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- Símbolo -->
+
+    <g transform="translate(170,25)">
+
+        <!-- Telhado -->
+
+        <path
+            d="M-38 28 L0 -8 L38 28"
+            fill="none"
+            stroke="#1E5AA8"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
+        <!-- Base -->
+
+        <line
+            x1="-24"
+            y1="28"
+            x2="24"
+            y2="28"
+            stroke="#0F2D52"
+            stroke-width="5"
+            stroke-linecap="round"/>
+
+    </g>
+
+    <!-- Nome -->
+
+    <text
+        x="170"
+        y="82"
+        text-anchor="middle"
+        font-family="Montserrat, Arial, sans-serif"
+        font-size="38"
+        font-weight="800"
+        fill="#0F2D52">
+
+        ACGL
+
+    </text>
+
+    <!-- Linha -->
+
+    <line
+        x1="105"
+        y1="94"
+        x2="235"
+        y2="94"
+        stroke="#1E5AA8"
+        stroke-width="2"/>
+
+    <!-- Subtítulo -->
+
+    <text
+        x="170"
+        y="118"
+        text-anchor="middle"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="16"
+        letter-spacing="2"
+        fill="#666666">
+
+        ENGENHARIA CIVIL
+
+    </text>
+
+</svg>
