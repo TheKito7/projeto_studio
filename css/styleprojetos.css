@@ -1,0 +1,353 @@
+/*====================================================
+                HERO - PROJETOS
+====================================================*/
+
+.projetos-hero{
+
+    background:
+    linear-gradient(rgba(11,17,32,.85),
+    rgba(11,17,32,.85)),
+    url("../img/projetos-banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+/*====================================================
+                INTRODUÇÃO
+====================================================*/
+
+.portfolio-intro{
+
+    padding:90px 0;
+    background:#fff;
+    text-align:center;
+
+}
+
+.portfolio-intro h5{
+
+    color:var(--azul);
+    letter-spacing:3px;
+    margin-bottom:15px;
+
+}
+
+.portfolio-intro h2{
+
+    font-size:42px;
+    margin-bottom:25px;
+
+}
+
+.portfolio-intro p{
+
+    width:70%;
+    margin:auto;
+    color:#64748B;
+    line-height:1.8;
+
+}
+
+/*====================================================
+                PORTFÓLIO
+====================================================*/
+
+.portfolio{
+
+    background:#F5F7FA;
+    padding:100px 0;
+
+}
+
+.portfolio-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/*====================================================
+                CARD
+====================================================*/
+
+.portfolio-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+
+    cursor:pointer;
+
+}
+
+.portfolio-card img{
+
+    width:100%;
+    height:350px;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.portfolio-card:hover img{
+
+    transform:scale(1.1);
+
+}
+
+/*====================================================
+                OVERLAY
+====================================================*/
+
+.overlay-card{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+    rgba(11,17,32,.15),
+    rgba(11,17,32,.92));
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:30px;
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.portfolio-card:hover .overlay-card{
+
+    opacity:1;
+
+}
+
+.overlay-card span{
+
+    display:inline-block;
+
+    width:max-content;
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    margin-bottom:15px;
+
+}
+
+.overlay-card h3{
+
+    color:white;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.overlay-card p{
+
+    color:#CBD5E1;
+
+    margin-bottom:25px;
+
+}
+
+/*====================================================
+                BOTÃO
+====================================================*/
+
+.overlay-card .btn{
+
+    width:max-content;
+
+}
+
+/*====================================================
+            CARD DESTAQUE
+====================================================*/
+
+.portfolio-card.destaque{
+
+    grid-column:span 2;
+
+}
+
+.portfolio-card.destaque img{
+
+    height:500px;
+
+}
+
+/*====================================================
+            HOVER
+====================================================*/
+
+.portfolio-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    border:3px solid transparent;
+
+    transition:.4s;
+
+}
+
+.portfolio-card:hover::after{
+
+    border-color:#2563EB;
+
+}
+
+/*====================================================
+            ANIMAÇÃO
+====================================================*/
+
+.portfolio-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/*====================================================
+            CTA
+====================================================*/
+
+.cta{
+
+    background:
+    linear-gradient(rgba(11,17,32,.92),
+    rgba(11,17,32,.92)),
+    url("../img/cta-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+.cta h5{
+
+    color:#60A5FA;
+
+    letter-spacing:3px;
+
+}
+
+.cta h2{
+
+    color:white;
+
+    font-size:42px;
+
+    margin:20px 0 40px;
+
+}
+
+/*====================================================
+            RESPONSIVO
+====================================================*/
+
+@media(max-width:1100px){
+
+    .portfolio-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .portfolio-card.destaque{
+
+        grid-column:span 2;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .portfolio-intro p{
+
+        width:95%;
+
+    }
+
+    .portfolio-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .portfolio-card.destaque{
+
+        grid-column:span 1;
+
+    }
+
+    .portfolio-card img{
+
+        height:300px;
+
+    }
+
+    .portfolio-card.destaque img{
+
+        height:350px;
+
+    }
+
+    .portfolio-intro h2{
+
+        font-size:34px;
+
+    }
+
+    .cta h2{
+
+        font-size:32px;
+
+    }
+
+}
