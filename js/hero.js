@@ -6,7 +6,7 @@ titulo:"Transformando uma residência em um moderno Studio.",
 
 descricao:"Conheça todo o processo de desenvolvimento do projeto.",
 
-imagem:"/imagens/Antes x Depois vistas.jfif"
+imagem:"imagens/Antes x Depois vistas.jfif"
 
 },
 
@@ -16,7 +16,7 @@ titulo:"Alisson Junior",
 
 descricao:"Colaborador da empresa.",
 
-imagem:"/imagens/Alisson.png"
+imagem:"imagens/Alisson.png"
 
 },  
 
@@ -26,7 +26,7 @@ titulo:"Gustavo",
 
 descricao:"Colabroador da empresa.",
 
-imagem:"/imagens/Gustavo.jpg"
+imagem:"imagens/Gustavo.jpg"
 
 },
 
@@ -36,7 +36,7 @@ titulo:"Cláudio",
 
 descricao:"Colaborador da empresa.",
 
-imagem:"/imagens/Claudio.jpg"
+imagem:"imagens/Claudio.jpg"
 
 },
 
@@ -46,7 +46,7 @@ titulo:"Leonardo",
 
 descricao:"Colaborador da empresa.",
 
-imagem:"/imagens/Leonardo.jfif"
+imagem:"imagens/Leonardo.jfif"
 
 }
 
