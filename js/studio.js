@@ -13,7 +13,7 @@ const documentos = [
         titulo: "Corte AB"
     },
     {
-        src: "../imagens/CorteBB.pdf", // Exemplo de PDF 3
+        src: "../imagens/corteBB.pdf", // Exemplo de PDF 3
         titulo: "Corte BB"
     },
     {
