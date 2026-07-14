@@ -1,0 +1,223 @@
+/*==========================================
+GALERIA
+==========================================*/
+
+.galeria-projeto{
+
+    padding:120px 0;
+
+    background:#F7F8FA;
+
+}
+
+.viewer{
+
+    margin-top:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:30px;
+
+}
+
+.viewer figure{
+
+    width:900px;
+
+}
+
+.viewer img{
+
+    width:100%;
+
+    height:550px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+figcaption{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+figcaption h3{
+
+    font-size:22px;
+
+}
+
+figcaption span{
+
+    color:#777;
+
+}
+
+.btn-slide{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:white;
+
+    font-size:22px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.btn-slide:hover{
+
+    background:#1E5AA8;
+
+    color:white;
+
+}
+
+.miniaturas{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.thumb{
+
+    width:120px;
+
+    height:80px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    opacity:.5;
+
+    transition:.3s;
+
+    border:3px solid transparent;
+
+}
+
+.thumb:hover{
+
+    opacity:1;
+
+    transform:scale(1.05);
+
+}
+
+.thumb.ativa{
+
+    opacity:1;
+
+    border-color:#1E5AA8;
+
+}
+/*==========================================
+    GALERIA EM BLOCOS (GRID)
+==========================================*/
+.galeria-projeto {
+    padding: 120px 0;
+    background: #F7F8FA;
+}
+
+.galeria-projeto .titulo {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* O Container principal dos blocos */
+.galeria-blocos {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Essa linha faz a mágica: cria colunas automáticas que não ficam menores que 320px */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Cada bloco individual */
+.bloco-imagem {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden; /* Mantém a imagem dentro das bordas arredondadas */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    background: #FFF;
+}
+
+/* A imagem dentro do bloco */
+.bloco-imagem img {
+    width: 100%;
+    height: 300px; /* Mantém todas as imagens com a mesma altura */
+    object-fit: cover; /* Corta a imagem sem distorcer para caber no bloco */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Efeito Hover: O bloco sobe um pouco e a imagem dá um leve zoom */
+.bloco-imagem:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.bloco-imagem:hover img {
+    transform: scale(1.05);
+}
+
+/* Legenda da imagem (Opcional, mas fica elegante) */
+.bloco-imagem .legenda {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0B1120;
+    text-align: center;
+    border-top: 1px solid #EAF2FF;
+}
+
+/* Ajuste para celulares pequenos */
+@media (max-width: 500px) {
+    .galeria-blocos {
+        grid-template-columns: 1fr; /* 1 imagem por linha no celular */
+    }
+    
+    .bloco-imagem img {
+        height: 250px;
+    }
+}

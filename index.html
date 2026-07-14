@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ACGL Engenharia Civil</title>
+    <title>ACGL Engenharia  Civil</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+    <script type="module" src="js/hero.js" defer></script>
 </head>
 
 <body>
@@ -50,15 +51,13 @@
 
                 <li><a href="paginas/servico.html">Serviços</a></li>
 
-                <li><a href="paginas/projetos.html">Projetos</a></li>
-
-                <li><a href="paginas/contato.html">Contato</a></li>
+                 <li><a href="paginas/paginastudio.html"> Projeto Studio </a></li>   
 
             </ul>
 
         </nav>
 
-        <a href="paginas/projeto-studio.html" class="btn-header">
+        <a href="/paginas/paginastudio.html" class="btn-header">
 
             Projeto Studio
 
@@ -70,29 +69,98 @@
 
     <!-- ================= HERO ================= -->
 
-    <section class="hero">
+  <!-- ==================================================
+ HERO
+===================================================-->
 
-    <div class="container">
+<section class="hero">
+
+    <div class="container hero-container">
 
         <div class="hero-text">
 
-            <span>ACGL ENGENHARIA CIVIL</span>
+            <span id="heroCategoria">
+                CASE STUDY • ACGL ENGENHARIA CIVIL
+            </span>
 
-            <h1>
-
-                Transformando uma residência em um moderno estúdio de mídias digitais.
-
+            <h1 id="heroTitulo">
+                Transformando uma residência em um moderno Studio.
             </h1>
 
-            <p>
+            <p id="heroDescricao">
 
-                Desenvolvemos uma proposta arquitetônica inovadora, transformando uma residência em um estúdio moderno, respeitando o limite máximo de 40% de reforma.
+                Conheça todo o processo de desenvolvimento do projeto,
+                desde os estudos preliminares até o resultado final.
 
             </p>
 
             <div class="hero-buttons">
 
-                <a href="pagina/projetostudio.html" class="btn">
+                <a href="paginas/paginastudio.html" class="btn">
+
+                    Conheça o Projeto
+
+                </a>
+
+
+            </div>
+
+            <div class="hero-counter">
+
+                <span id="slideAtual">01</span>
+
+                <div class="linha"></div>
+
+                <span>05</span>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <button class="hero-btn prev">
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+            </button>
+
+            <img
+                id="heroImagem"
+                src="imagens/hero/hero1.jpg"
+                alt="Projeto Studio">
+
+            <button class="hero-btn next">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-dots">
+
+        <span class="dot active"></span>
+
+        <span class="dot"></span>
+
+        <span class="dot"></span>
+
+        <span class="dot"></span>
+
+        <span class="dot"></span>
+
+    </div>
+
+</section>
+
+</section>
+
+            <div class="hero-buttons">
+
+                <a href="/paginas/paginastudio.html" class="btn">
 
                     Conheça o Projeto
 
@@ -100,7 +168,7 @@
 
                 <a href="#" class="btn-outline">
 
-                    Portfólio
+                    Saiba Mais
 
                 </a>
 
@@ -108,55 +176,10 @@
 
         </div>
 
-        <div class="hero-image">
-  
-            <h2>Imagem do projeto finalizado em 3D</h2>
-            
-
-        </div>
 
     </div>
 
 </section>
-    <!-- ================= ESTATÍSTICAS ================= -->
-
-    <section class="numeros">
-
-    <div class="container">
-
-        <div>
-
-            <h2>xm²</h2>
-
-            <p>Área Reformada</p>
-
-        </div>
-
-        <div>
-
-            <h2></h2>
-
-            <p>Pavimentos</p>
-
-        </div>
-
-        <div>
-
-            <h2>40%</h2>
-
-            <p>Limite de Reforma</p>
-
-        </div>
-
-        <div>
-
-            <h2>04</h2>
-
-            <p>Integrantes</p>
-
-        </div>
-
-    </div>
 
 </section>
     <!-- ================= SOBRE ================= -->
@@ -167,13 +190,11 @@
 
             <div>
 
-                <img src="imagens/projetos/equipe.jpg" alt="Equipe">
+                 <img src="imagens/Quem somo eu e Alisson.png" alt="Equipe trabalhando" title="Equipe trabalhando"> 
 
             </div>
 
             <div>
-
-                <h5>QUEM SOMOS</h5>
 
                 <h2>Uma empresa criada para transformar ideias em espaços inteligentes.</h2>
 
@@ -232,15 +253,6 @@
 
             </div>
 
-            <div class="card">
-
-                <i class="fa-solid fa-cube"></i>
-
-                <h3>Modelagem 3D</h3>
-
-                <p>Visualização completa através de renders realistas.</p>
-
-            </div>
 
         </div>
 
@@ -254,7 +266,7 @@
 
             <div>
 
-                <img src="imagens/renders/studio.png" alt="Studio">
+                <img src="imagens/Antes x Depois vistas.jfif" alt="Studio" title="Casa X Studio">
 
             </div>
 
@@ -272,7 +284,7 @@
 
                 </p>
 
-                <a href="paginas/projeto-studio.html" class="btn">
+                <a href="paginas/paginasstudio.html" class="btn">
 
                     Explorar Projeto
 
@@ -302,7 +314,7 @@
 
                 <i class="fa-solid fa-lightbulb"></i>
 
-                <h3>Planejamento</h3>
+                <h3> Demanda </h3>
 
             </div>
 
@@ -310,7 +322,7 @@
 
                 <i class="fa-solid fa-pencil-ruler"></i>
 
-                <h3>Projeto</h3>
+                <h3> Estudos preliminares </h3>
 
             </div>
 
@@ -318,7 +330,7 @@
 
                 <i class="fa-solid fa-compass-drafting"></i>
 
-                <h3>Compatibilização</h3>
+                <h3> Anteprojeto </h3>
 
             </div>
 
@@ -326,7 +338,7 @@
 
                 <i class="fa-solid fa-camera"></i>
 
-                <h3>Resultado Final</h3>
+                <h3>Projeto executivo </h3>
 
             </div>
 
@@ -350,13 +362,6 @@
 
             <div class="card">AutoCAD</div>
 
-            <div class="card">SketchUp</div>
-
-            <div class="card">Revit</div>
-
-            <div class="card">Lumion</div>
-
-            <div class="card">BIM</div>
 
         </div>
 
@@ -372,7 +377,7 @@
 
         </h2>
 
-        <a href="paginas/projeto-studio.html" class="btn">
+        <a href="paginas/paginastudio.html" class="btn">
 
             Ver Projeto Completo
 
@@ -380,6 +385,95 @@
 
     </section>
 
+
+
+    <!--==================== CONTATO ====================-->
+
+<section id="contato-home" class="contato-home">
+
+    <div class="container">
+
+        <div class="contato-info">
+
+            <span>ENTRE EM CONTATO</span>
+
+            <h2>
+
+                Vamos transformar sua ideia em realidade.
+
+            </h2>
+
+            <p>
+
+                Solicite um orçamento sem compromisso.
+                Nossa equipe está preparada para desenvolver
+                projetos residenciais, comerciais e reformas
+                inteligentes.
+
+            </p>
+
+
+            <div class="info-item">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span>Aracaju • SE</span>
+
+            </div>
+
+        </div>
+
+        <form class="formulario">
+
+            <input
+                type="text"
+                placeholder="Seu nome"
+                required>
+
+            <input
+                type="email"
+                placeholder="Seu e-mail"
+                required>
+
+            <input
+                type="tel"
+                placeholder="Telefone">
+
+            <textarea
+                rows="6"
+                placeholder="Conte-nos um pouco sobre o seu projeto..."></textarea>
+
+            <button type="submit">
+
+                Solicitar Orçamento
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!--==================================================
+                PARCEIROS
+==================================================-->
+<section class="parceiros">
+    <div class="container">
+        <div class="titulo">
+            <span>CONFIANÇA</span>
+            <h2>Nossos Parceiros</h2>
+        </div>
+        
+        <div class="parceiros-grid">
+            <!--  caminho correto das suas imagens -->
+             <img src="imagens/ifs.png" alt="Empresa Parceira 1" tiltle="IFS">
+            <img src="imagens/petro.png" alt="Empresa Parceira 2" title="Petrobras">
+            <img src="imagens/energisa.png" alt="Empresa Parceira 3" title="Energisa">
+    
+        </div>
+    </div>
+</section>
     <!-- ================= FOOTER ================= -->
 
     <footer>
@@ -388,7 +482,7 @@
 
             <div>
 
-                <h3>▲ ACGL Engenharia Civil</h3>
+                <h3>  ACGL Engenharia Civil</h3>
 
                 <p>
 
@@ -401,12 +495,9 @@
             <div>
 
                 <h4>Links</h4>
-
-                <p>Empresa</p>
-
-                <p>Projetos</p>
-
-                <p>Contato</p>
+                   
+           <a href="paginas/servico.html"> <p>Serviços</p> </a>   
+        <a href="paginas/empresa.html"> <p>Empresa</p> </a>
 
             </div>
 
@@ -414,9 +505,11 @@
 
                 <h4>Contato</h4>
 
-                <p>(79) 99999-9999</p>
+                <p> leonardo.slapelis@academico.ifs.edu.br </p>
+                <p> gustavo.b@academico.ifs.edu.br </p>
+                <p>  claudio.filho861@academico.ifs.edu.br </p> 
+                <p> alisson.junior080@academico.ifs.edu.br </p>
 
-                <p>contato@acgl.com.br</p>
 
             </div>
 
@@ -424,7 +517,7 @@
 
         <div class="copy">
 
-            © 2026 ACGL Engenharia Civil • Projeto Acadêmico
+            © 2026 ACGL Engenharia Civil • Projeto Acadêmico em realização para Instituto Federal de Sergipe • Todos os direitos reservados.
 
         </div>
 

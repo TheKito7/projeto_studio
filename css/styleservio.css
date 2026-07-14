@@ -1,306 +1,325 @@
 /*=====================================================
-                HERO - SERVIÇOS
+    VARIÁVEIS GLOBAIS (DESIGN SYSTEM)
 =====================================================*/
-
-.servicos-hero{
-
-    background:
-    linear-gradient(rgba(11,17,32,.85),
-    rgba(11,17,32,.85)),
-    url("../img/servicos-banner.jpg");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
+:root {
+    /* Cores */
+    --primary: #2563EB;
+    --primary-hover: #1D4ED8;
+    --primary-light: #EAF2FF;
+    --secondary-light: #60A5FA;
+    --text-dark: #0B1120;
+    --text-muted: #64748B;
+    --bg-light: #F8FAFC;
+    --bg-white: #FFFFFF;
+    
+    /* Sombras */
+    --shadow-default: 0 12px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 25px 45px rgba(0, 0, 0, 0.16);
+    
+    /* Transições */
+    --transition-speed: 0.4s;
 }
 
 /*=====================================================
-                SERVIÇOS
+    CORREÇÃO: HERO - SERVIÇOS (TEXTOS E ALINHAMENTO)
 =====================================================*/
-
-.servicos-page{
-
-    padding:100px 0;
-    background:#F8FAFC;
-
+.servicos-hero {
+    /* Mantém o seu fundo escuro e a imagem */
+    background: linear-gradient(rgba(11, 17, 32, 0.85), rgba(11, 17, 32, 0.85)), url("../img/servicos-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Adiciona Flexbox para centralizar tudo perfeitamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px; /* Define uma altura boa para o banner */
+    padding: 0 20px;
 }
 
-.servicos-page .titulo{
-
-    text-align:center;
-    margin-bottom:70px;
-
+.servicos-hero .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.cards-servicos{
-
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:35px;
-
+/* Forçando a cor branca no Título */
+.servicos-hero .hero-content h1 {
+    color: #FFFFFF !important; 
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para garantir leitura sobre qualquer foto */
 }
 
-/* Card */
-
-.service{
-
-    background:#FFFFFF;
-
-    border-radius:18px;
-
-    padding:45px 35px;
-
-    text-align:center;
-
-    transition:.4s;
-
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-    position:relative;
-
-    overflow:hidden;
-
+/* Forçando a cor branca no Subtítulo */
+.servicos-hero .hero-content p {
+    color: #F8FAFC !important; /* Um branco levemente suave */
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Barra superior */
-
-.service::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:5px;
-
-    background:#2563EB;
-
-    transform:scaleX(0);
-
-    transition:.35s;
-
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .servicos-hero .hero-content h1 {
+        font-size: 36px;
+    }
+    .servicos-hero .hero-content p {
+        font-size: 16px;
+    }
 }
-
-.service:hover::before{
-
-    transform:scaleX(1);
-
-}
-
-.service:hover{
-
-    transform:translateY(-12px);
-
-    box-shadow:0 25px 45px rgba(0,0,0,.16);
-
-}
-
-/* Ícone */
-
-.service i{
-
-    width:90px;
-    height:90px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    margin:auto;
-    margin-bottom:25px;
-
-    border-radius:50%;
-
-    background:#EAF2FF;
-
-    color:#2563EB;
-
-    font-size:36px;
-
-    transition:.4s;
-
-}
-
-.service:hover i{
-
-    background:#2563EB;
-
-    color:white;
-
-    transform:rotate(360deg);
-
-}
-
-/* Título */
-
-.service h3{
-
-    font-size:24px;
-
-    color:#0B1120;
-
-    margin-bottom:15px;
-
-}
-
-/* Texto */
-
-.service p{
-
-    color:#64748B;
-
-    font-size:16px;
-
-    line-height:1.7;
-
+/*=====================================================
+    HERO - SERVIÇOS
+=====================================================*/
+.servicos-hero {
+    background: linear-gradient(rgba(11, 17, 32, 0.85), rgba(11, 17, 32, 0.85)), url("../img/servicos-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /*=====================================================
-                PROCESSO
+    SERVIÇOS (CONTAINER)
 =====================================================*/
-
-.processo-servico{
-
-    padding:100px 0;
-
-    background:#FFFFFF;
-
+.servicos-page {
+    padding: 100px 0;
+    background: var(--bg-light);
 }
 
-.processo-servico .titulo{
+.servicos-page .titulo,
+.processo-servico .titulo {
+    text-align: center;
+    margin-bottom: 70px;
+}
 
-    text-align:center;
-
-    margin-bottom:70px;
-
+.cards-servicos {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
 }
 
 /*=====================================================
-                CTA
+    CARDS DE SERVIÇO
 =====================================================*/
-
-.cta{
-
-    background:
-    linear-gradient(rgba(11,17,32,.90),
-    rgba(11,17,32,.90)),
-    url("../img/cta-bg.jpg");
-
-    background-size:cover;
-    background-position:center;
-
-    text-align:center;
-
-    padding:120px 20px;
-
+.service {
+    background: var(--bg-white);
+    border-radius: 18px;
+    padding: 45px 35px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-default);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    animation: fadeUp 0.8s ease forwards;
 }
 
-.cta h5{
-
-    color:#60A5FA;
-
-    letter-spacing:3px;
-
+/* Barra superior do Card */
+.service::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
 }
 
-.cta h2{
-
-    color:white;
-
-    font-size:42px;
-
-    margin:20px 0 40px;
-
+/* Efeitos Hover no Card */
+.service:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-hover);
 }
 
-.cta .btn{
-
-    display:inline-block;
-
-    padding:18px 40px;
-
-    background:#2563EB;
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:8px;
-
-    transition:.35s;
-
-    font-weight:600;
-
+.service:hover::before {
+    transform: scaleX(1);
 }
 
-.cta .btn:hover{
+/* Ícone do Card */
+.service i {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px auto;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 36px;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
 
-    background:#1D4ED8;
+.service:hover i {
+    background: var(--primary);
+    color: var(--bg-white);
+    transform: rotate(360deg);
+}
 
-    transform:translateY(-5px);
+/* Textos do Card */
+.service h3 {
+    font-size: 24px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
 
+.service p {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 /*=====================================================
-            ANIMAÇÃO DOS CARDS
+    PROCESSO
 =====================================================*/
-
-.service{
-
-    animation:fadeUp .8s ease;
-
+.processo-servico {
+    padding: 100px 0;
+    background: var(--bg-white);
 }
 
 /*=====================================================
-                RESPONSIVO
+    CALL TO ACTION (CTA)
 =====================================================*/
-
-@media(max-width:1100px){
-
-    .cards-servicos{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
+.cta {
+    background: linear-gradient(rgba(11, 17, 32, 0.90), rgba(11, 17, 32, 0.90)), url("../img/cta-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 120px 20px;
 }
 
-@media(max-width:768px){
-
-    .cards-servicos{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .cta h2{
-
-        font-size:32px;
-
-    }
-
+.cta h5 {
+    color: var(--secondary-light);
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-@media(max-width:500px){
+.cta h2 {
+    color: var(--bg-white);
+    font-size: 42px;
+    margin: 20px 0 40px;
+}
 
-    .service{
+.cta .btn {
+    display: inline-block;
+    padding: 18px 40px;
+    background: var(--primary);
+    color: var(--bg-white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.35s ease, transform 0.35s ease;
+}
 
-        padding:35px 25px;
+.cta .btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-5px);
+}
 
+/*=====================================================
+    ANIMAÇÕES KEYFRAMES
+=====================================================*/
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
     }
-
-    .service h3{
-
-        font-size:21px;
-
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
+/*=====================================================
+    RESPONSIVO
+=====================================================*/
+@media (max-width: 1100px) {
+    .cards-servicos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-servicos {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    .service {
+        padding: 35px 25px;
+    }
+    
+    .service h3 {
+        font-size: 21px;
+    }
+}
+/*=====================================================
+    CALL TO ACTION (CTA) - ALINHAMENTO CORRIGIDO
+=====================================================*/
+.cta {
+    background: linear-gradient(rgba(11, 17, 32, 0.90), rgba(11, 17, 32, 0.90)), url("../img/cta-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    /* Forçando o empilhamento e alinhamento central */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    padding: 120px 20px;
+}
+
+.cta h5 {
+    color: #60A5FA; /* Cor azul clara */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    width: 100%; /* Garante que respeite o centro */
+}
+
+.cta h2 {
+    color: #FFFFFF;
+    font-size: 42px;
+    margin: 0 0 40px 0;
+    max-width: 800px; /* Evita que o texto fique comprido demais nas laterais */
+    width: 100%;
+}
+
+.cta .btn {
+    display: inline-block;
+    padding: 18px 40px;
+    background: #2563EB;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.35s ease, transform 0.35s ease;
+}
+
+.cta .btn:hover {
+    background: #1D4ED8;
+    transform: translateY(-5px);
+}
+
+/* Ajuste do tamanho da fonte para celulares */
+@media (max-width: 768px) {
+    .cta h2 {
+        font-size: 32px;
+    }
 }
